@@ -9,16 +9,11 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # To use this repository's private action,
-      # you must check out the repository
-      - name: Checkout
-        uses: actions/checkout@v5
-
       - name: Hello world action step
-        uses: ./ # Uses an action in the root directory
         id: hello
+        uses: sonuabraham/hello-world-javascript-action@42365054f0d7e144cc0b2fa38b100e2b00a0f858
         with:
-          who-to-greet: Mona the Octocat
+          who-to-greet: Sonu the OctoTiger
 
       # Use the output from the `hello` step
       - name: Get the output time
